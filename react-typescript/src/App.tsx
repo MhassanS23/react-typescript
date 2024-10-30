@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Button from './components/Button';
 import Heading from './components/Heading';
 import Text from './components/Text';
+import Input from './components/Input';
 
 type userData = {
   name: string;
@@ -12,6 +13,12 @@ type userData = {
 function App() {
   const [isLogin, setIsLogin] = useState(false);
   const [user, setUser] = useState<userData | null>(null);
+  const [input, setInput] = useState<string>('');
+
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInput(event.target.value);
+  }
 
   const handleLogin = () => {
     setIsLogin(true);
@@ -38,6 +45,7 @@ function App() {
         <Text>User {isLogin ? 'berhasil masuk' : 'telah keluar'}</Text>
         <Text>Nama User: {user?.name ? user.name : 'null'}</Text>
         <Text>Email User: {user?.email ? user.email : 'null'}</Text>
+        <Input value={input} onChange={handleInputChange}/>
       </div>
 
       {/* <Alert type='Success' text='Alert Succes Berhasil' visibleAlert={true}/> */}
