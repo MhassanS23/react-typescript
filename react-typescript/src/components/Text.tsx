@@ -1,7 +1,7 @@
 import React from "react";
 
 type TextProps = {
-    children: React.ReactNode;
+    children: React.ReactNode | string | number;
 }
 
 export default function Text (props: TextProps){

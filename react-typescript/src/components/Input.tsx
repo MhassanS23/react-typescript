@@ -9,6 +9,6 @@ type InputProps = {
 
 export default function Input ({value, className = '', onChange}: InputProps){
     return(
-        <input value={value} type="text" onChange={onChange} className={`${className} font-Roboto text-md px-5 py-2 rounded-md`}/>
+        <input value={value} type="text" onChange={onChange} className={`${className} font-Roboto text-md px-5 py-2 my-4 rounded-md`}/>
     );
 }

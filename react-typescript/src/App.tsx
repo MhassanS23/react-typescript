@@ -4,6 +4,7 @@ import Button from './components/Button';
 import Heading from './components/Heading';
 import Text from './components/Text';
 import Input from './components/Input';
+import Counter from './Counter';
 
 type userData = {
   name: string;
@@ -46,6 +47,7 @@ function App() {
         <Text>Nama User: {user?.name ? user.name : 'null'}</Text>
         <Text>Email User: {user?.email ? user.email : 'null'}</Text>
         <Input value={input} onChange={handleInputChange}/>
+        <Counter/>
       </div>
 
       {/* <Alert type='Success' text='Alert Succes Berhasil' visibleAlert={true}/> */}
