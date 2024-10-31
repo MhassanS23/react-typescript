@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 // import Alert from './components/Alert';
-import Button from './components/Button';
-import Heading from './components/Heading';
-import Text from './components/Text';
-import Input from './components/Input';
+import Button from '../components/Button';
+import Heading from '../components/Heading';
+import Text from '../components/Text';
+import Input from '../components/Input';
 import Counter from './Counter';
+import RefInput from '../components/ref/RefInput';
 
 type userData = {
   name: string;
@@ -48,6 +49,7 @@ function App() {
         <Text>Email User: {user?.email ? user.email : 'null'}</Text>
         <Input value={input} onChange={handleInputChange}/>
         <Counter/>
+        <RefInput/>
       </div>
 
       {/* <Alert type='Success' text='Alert Succes Berhasil' visibleAlert={true}/> */}
