@@ -9,7 +9,8 @@ import RefInput from '../components/ref/RefInput';
 
 // import { ThemeProvider } from '../components/context/ThemeContext';
 import { Increament } from '../components/class/increament';
-import { List } from '../components/generic/List';
+// import { List } from '../components/generic/List';
+import Navigation from '../components/Navigation';
 // import { Private } from '../components/auth/Private';
 // import Profile from '../components/auth/Profile';
 
@@ -58,7 +59,7 @@ function App() {
           <RefInput/>
           <Increament message='Number Berhasil di increament'/>
           {/* <Private isLogedIn={true} Component={Profile}/> */}
-        <List items={[
+        {/* <List items={[
           {
             id: 1,
             name: 'neymar',
@@ -72,7 +73,8 @@ function App() {
             name: 'ronaldo',
             club: 'real madrid'
           }
-        ]} onClick={(item) => console.log(item)}/>
+        ]} onClick={(item) => console.log(item)}/> */}
+        <Navigation/>
       </div>
 
 
